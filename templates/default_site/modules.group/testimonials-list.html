@@ -1,0 +1,8 @@
+<ul class="list">
+	{exp:channel:entries channel="testimonials" dynamic="no" limit="100" paginate="bottom" orderby="random"}
+		<li>
+			<blockquote>{exp:remove_html}"{body}"{/exp:remove_html}</blockquote>
+			<cite>&#8212; {title}</cite>
+		</li>
+	{/exp:channel:entries}
+</ul>

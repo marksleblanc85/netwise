@@ -1,0 +1,19 @@
+<div class="product-list">
+	<ul class="list {if segment_2 == 'risk-collections' OR segment_2 == ""}grid{/if}">
+		{exp:channel:entries channel="products" category="{segment_category_ids_piped}" dynamic="no" limit="100" paginate="bottom" orderby="entry_date" sort="asc"}
+			<li class='{if segment_2 == "risk-collections" OR segment_2 == ""}tc{/if}'>
+				<h4>{if segment_2 == "risk-collections" OR segment_2 == ""}<a href="{site-url}/industries-served/{url_title}">{/if}<img src="{product-icon}" class='{if segment_2 == "risk-collections" OR segment_2 == ""}center{if:else}left{/if}'> {if product-title-alt}{product-title-alt}{if:else}{title}{/if}{if segment_2 == "risk-collections"}</a>{/if}</h4>
+				<br>
+				<div>
+					{if segment_2 != "risk-collections" && segment_2 != ""}
+						{product-body}
+					{if:elseif segment_2 == ""}
+						{product-description}
+					{if:else}
+						{product-description}
+					{/if}
+				</div>
+			</li>
+		{/exp:channel:entries}
+	</ul>
+</div>

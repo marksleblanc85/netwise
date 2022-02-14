@@ -1,0 +1,79 @@
+<header id="header">
+	<div class="wrapper clearfix">
+		<div class="span4">
+			<a href="{site-url}"><img src="{site-url}/images/netwise-logo.png" border="0"></a>
+		</div>
+		<!--<div class="span4 tr pt15 right">
+			<a id="navbtn" href="javascript:void(0);">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar last"></span>
+			</a>
+		</div>-->
+		<nav class="span8 right mobilehide">
+			<ul>
+				<li class="last">
+					<a href="{site-url}/contact" class="{if segment_2 == "contact"}active{/if} pt10">Contact</a>
+				</li>
+				{!--<li>
+					<a href="{site-url}/resources" class="{if segment_2 == "resources"}active{/if} pt10">Resources</a>
+				</li>
+				<li>
+					<a href="{site-url}/events" class="{if segment_2 == "events"}active{/if} pt10">Events</a>
+				</li>--}
+				<li class="sub abt">
+					<a href="{site-url}/about" class="{if segment_2 == "about"}active{/if} pt10">About</a>
+					<ul>
+						<li><a href="{site-url}/about/team">Team</a></li>
+						<li><a href="{site-url}/about/values">Values</a></li>
+						<li><a href="{site-url}/about/testimonials">Testimonials</a></li>
+						<li><a href="{site-url}/about/affiliations">Affiliations</a></li>
+						{!--<li><a href="{site-url}/about/milestones">Milestones</a></li>--}
+						<li><a href="{site-url}/about/careers">Careers</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="{site-url}/security" class="{if segment_2 == ""}active{/if} pt10">Security</a>
+				</li>
+				<li class="sub">
+					<a href="{site-url}/industries-served">INDUSTRIES SERVED</a>
+					<ul>
+						<li class="subsub">
+							<a href="{site-url}/industries-served/risk-collections" class="karat">RISK &amp; COLLECTIONS</a>
+							<ul>
+								<li><a href="{site-url}/industries-served/poeplus">POE<strong><em class="lower">plus</em></strong></a></li>
+								<li><a href="{site-url}/industries-served/poe">POE</a></li>
+								<li><a href="{site-url}/industries-served/v-poe">V-POE</a></li>
+								<li><a href="{site-url}/industries-served/bank">BANK</a></li>
+								<li><a href="{site-url}/industries-served/ebank"><span class="lower">e</span>BANK</a></li>
+								<li><a href="{site-url}/industries-served/v-bank">V-BANK</a></li>
+								<li><a href="{site-url}/industries-served/incar">INCAR</a></li>
+								<li><a href="{site-url}/industries-served/social-network-reports">Social Network Reports</a></li>
+							</ul>
+						</li>
+						<li><a href="{site-url}/industries-served/b2b-marketing">B2B MARKETING</a></li>
+						<li><a href="{site-url}/industries-served/loss-prevention">LOSS PREVENTION</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<select name="mobilenav" id="mobilenav" class="mobileshow">
+			<option value="">Site Navigation</option>
+			<option value="home">Home</option>
+			<optgroup label="Industries Served">
+				<option value="industries-served/risk-collections">Risk &amp; Collections</option>
+				<option value="industries-served/b2b-marketing">B2B Marketing</option>
+				<option value="industries-served/loss-prevention">Loss Prevention</option>
+			</optgroup>
+			<option value="security">Security</option>
+			<optgroup label="About">
+				<option value="solutions/idibasic">Team</option>
+				<option value="solutions/idiverified">Values</option>
+				<option value="batch-processing">Testimonials</option>
+				<option value="solutions/idibasic">Affiliations</option>
+				<option value="solutions/idiverified">Careers</option>
+			</optgroup>
+			<option value="contact">Contact</option>
+		</select>
+	</div>
+</header>

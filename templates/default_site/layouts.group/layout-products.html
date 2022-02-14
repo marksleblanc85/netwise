@@ -1,0 +1,27 @@
+	{embed="main/head"}
+	<body class="layout-inner {segment_1} {segment_2}">
+		{embed="main/header"}
+		{exp:channel:entries channel="products" dynamic="yes" limit="1" paginate="bottom" orderby="entry_date" sort="desc"}
+			<div id="page-header" class="wrapper clearfix">
+				<div class="span8">
+					<img src="{product-icon}" align="left"> <h1>{if product-title-alt}{product-title-alt}{if:else}{title}{/if}</h1>
+				</div>
+				<div class="span4 tr">
+					<div class="breadcrumb">
+						{exp:structure:breadcrumb here_as_title="yes" separator=" / "}
+					</div>
+				</div>
+			</div>
+			<div class="wrapper clearfix">
+				<div class="span8">
+					{if page-subhead}<h2 class="blue">{page-subhead}</h2>{/if}
+					<div class="body-content pad30">
+						{product-body}
+					</div>
+				</div>
+			</div>
+		{/exp:channel:entries}
+		{embed="Main/footer"}
+		{embed="Main/scripts"}
+	</body>
+</html>

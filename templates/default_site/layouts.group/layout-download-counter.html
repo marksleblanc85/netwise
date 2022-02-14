@@ -1,0 +1,62 @@
+	{embed="main/head"}
+	<body class="layout-inner {if segment_1 == 'products'}layout-product{/if} {segment_2}">
+		{embed="main/header"}
+		{exp:channel:entries channel="pages" dynamic="yes" limit="1" paginate="bottom" orderby="entry_date" sort="desc"}
+			<div id="page-header" class="wrapper clearfix">
+				<div class="span8">
+					<h1>{title}</h1>
+					<p>Your download will begin in <span id="timeLeft">5</span> seconds. If it does not begin, <a href="{page-download-url}" target="_blank">click here</a>.</p>
+				</div>
+				<div class="span4 tr">
+					<div class="breadcrumb">
+						{exp:structure:breadcrumb here_as_title="yes" separator=" / "}
+					</div>
+				</div>
+			</div>
+			<div class="wrapper clearfix min-height">
+				<div class="span12">
+					{if page-subhead}<h2 class='p30 blue {if segment_2 == "b2b-marketing"}purple{/if}{if segment_2 == "risk-collections"}red{/if}{if segment_2 == "loss-prevention"}green{/if}'>{page-subhead}</h2>{/if}
+					{if page-image}
+						<img src="{page-image}" alt="">
+					{/if}
+					<div class="body-content pad30">
+						{page-body}
+						{if segment_2 == "team"}
+							{embed="modules/team-list"}
+						{/if}
+						{if segment_2 == "testimonials"}
+							{embed="modules/testimonials-list"}
+						{/if}
+					</div>
+					{if segment_1 == "industries-served" && segment_2 == ""}
+						{embed="modules/3-products"}
+					{/if}
+					{if segment_2 == "b2b-marketing"}
+						{embed="modules/product-list"}
+					{/if}
+				</div>
+			</div>
+			<div class="wrapper clearfix">
+				{if segment_1 == "industries-served" && segment_2 == "risk-collections"}
+					{embed="modules/product-list"}
+				{/if}
+			</div>
+			{embed="Main/footer"}
+			{embed="Main/scripts"}
+			<script type="text/javascript">
+				$(function(){
+					$(function(){
+						var timer = 5, tid=0; tid= setInterval(function() { 
+							$('#timeLeft').html('').html(timer.toString()); 
+							timer--; 
+							if(timer<0) { 
+								window.open('{page-download-url}'); 
+								clearInterval(tid); 
+							} 
+						}, 1000);
+					});
+				})
+			</script>
+		{/exp:channel:entries}
+	</body>
+</html>

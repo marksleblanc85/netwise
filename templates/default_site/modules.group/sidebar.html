@@ -1,0 +1,27 @@
+{if segment_1 == "about"}
+	<h2>Are You a Wise Data Buyer?</h2>
+	<p>Learn how to buy data wisely in this compact, informative guide. </p>
+	<p>Or call (561) 409-0570 for a consultation. </p>
+	<a href="{site-url}/wise-data-buyer" class="btn large caps">Get the Guide</a>
+
+{if segment_1 == "loss-prevention"}
+	<img src="{site-url}/images/Stolen-911-Logo.png"  alt="" href="http://stolen911.com/"><h2>NetWise Data Passes SOC2 Security Audit</h2>
+	<p>NetWise is pleased to announce its partnership with Stolen911, the industry's leading site for consumer theft information. The partnership will allow law enforcement agencies to identify what items consumers are listing as stolen in their geographic footprint within the Product Resale Monitor.</p>
+
+{if:elseif segment_1 == "security"}
+	<h2>NetWise Data Passes SOC2 Security Audit</h2>
+	<p>NetWise Data is pleased to announce that we recently passed the Service Organization Control 2 (SOC2) security examination under AT 101, a widely recognized auditing standard developed by the American Institute of Certified Public Accountants (AICPA).</p>
+	<p>This rigorous audit validates the reliability, scalability, security and processing integrity of NetWise Data’s managed hosting and dedicated hosting services. A number of components were tested, including infrastructure, software, personnel, procedures and data. The AT 101 SOC 2 TYPE 2 certification demonstrates that NetWise Data complies with rigorous controls and safeguards when hosting or processing customer data.</p>
+	<p class="small"><strong><em>—Copies of NetWise Data SOC 2 security audit are available upon request.</em></strong></p>
+{if:elseif segment_1 == "wise-data-buyer"}
+	{if segment_2 == ""}
+	<h2 class="p20">Download now!</h2>
+	{exp:channel:entries channel="pages" dynamic="yes" limit="1" paginate="bottom" orderby="entry_date" sort="desc"}
+		{if page_form}{page_form}{/if}
+	{/exp:channel:entries}
+	{/if}
+{if:elseif segment_2 == "b2b-marketing"}
+	<h4 class="purple tc pt30 p20">Meet Our Partners</h4>
+	<img src="{site-url}/images/B2B-logos2.jpg" alt="">
+	{/if}
+{/if}
